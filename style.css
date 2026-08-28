@@ -1,0 +1,176 @@
+/* =========================================
+   SETUP DASAR & TEMA (Dark Neutral Minimalist)
+   ========================================= */
+:root {
+    --bg-main: #090a0f;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #ededed;
+    --text-muted: #888899;
+    --accent-glow: rgba(99, 102, 241, 0.15);
+    --accent-color: #6366f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 40px 20px;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================================
+   TYPOGRAPHY & TEXT FORMATTING
+   ========================================= */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 40%, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+strong {
+    color: var(--text-primary);
+}
+
+mark {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+del {
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   LINK & BUTTONS
+   ========================================= */
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   KARTU PROFIL (Glassmorphism Concept)
+   ========================================= */
+.kartu-profil {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 32px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.kartu-profil:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.kartu-profil img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 2px solid var(--card-border);
+}
+
+.kartu-profil h4 {
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.kartu-profil a {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.kartu-profil a:hover {
+    background: #e2e8f0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================
+   INPUT & ACTION BUTTON
+   ========================================= */
+input[type="text"] {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    padding: 12px 18px;
+    border-radius: 14px;
+    outline: none;
+    width: 60%;
+    margin-right: 8px;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}

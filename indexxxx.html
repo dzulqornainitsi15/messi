@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzulqornain | Portfolio</title>
+    <style>
+        /* =========================================
+           1. MODERN MINIMALIST VARIABLES
+        ========================================= */
+        :root {
+            --bg-main: #0a0a0a;
+            --bg-card: #141414;
+            --text-primary: #ededed;
+            --text-secondary: #a1a1aa;
+            --border-light: rgba(255, 255, 255, 0.08);
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+        /* =========================================
+           2. TYPOGRAPHY & HERO
+        ========================================= */
+        h1 { font-size: clamp(3rem, 6vw, 5rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 1.5rem; }
+        p.subtitle { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 3rem; font-weight: 400; }
+        
+        .badge {
+            display: inline-block; padding: 6px 12px;
+            background: #ffffff10; border: 1px solid var(--border-light);
+            border-radius: 20px; font-size: 0.85rem; color: var(--text-secondary);
+            margin-bottom: 2rem; letter-spacing: 0.02em;
+        }
+
+        /* =========================================
+           3. CLEAN BENTO GRID
+        ========================================= */
+        .grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem; auto-rows: minmax(200px, auto);
+        }
+
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: 16px; padding: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .card:hover { border-color: rgba(255, 255, 255, 0.2); transform: scale(0.99); }
+
+        .card-large { grid-column: span 2; }
+        .card-full { grid-column: span 3; display: flex; justify-content: space-between; align-items: center; }
+
+        .card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .card p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; }
+
+        .list-clean { list-style: none; color: var(--text-secondary); }
+        .list-clean li { padding: 0.5rem 0; border-bottom: 1px solid var(--border-light); }
+        .list-clean li:last-child { border-bottom: none; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .card-large, .card-full { grid-column: span 1; flex-direction: column; align-items: flex-start; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <div class="badge">Dzulqornain Syaiful Haq</div>
+        <h1>Building networks.<br>Structuring logic.</h1>
+        <p class="subtitle">Vocational student specializing in Computer & Network Engineering. Focused on secure infrastructure, cloud routing, and clean code.</p>
+
+        <div class="grid">
+            <!-- Focus Area -->
+            <div class="card card-large">
+                <h3>Current Operations</h3>
+                <p>Prioritizing practical network implementations. Currently focused on executing technical configurations covering router Cloud features, WLAN architecture, and DHCP provisioning.</p>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="card">
+                <h3>Toolkit</h3>
+                <ul class="list-clean">
+                    <li>MikroTik RouterOS</li>
+                    <li>Linux Ubuntu Environment</li>
+                    <li>Frontend Technologies</li>
+                    <li>Wokwi Simulator</li>
+                </ul>
+            </div>
+
+            <!-- Experience / Leadership -->
+            <div class="card card-full">
+                <div>
+                    <h3>Leadership & Initiative</h3>
+                    <p>Chief Executive for INC X IEF Fair (2024). Active member of OSIS ITSI and English Club, managing project documentation and fostering global communication skills.</p>
+                </div>
+                <div style="text-align: right; color: var(--text-secondary);">
+                    <p>Surakarta, ID</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
